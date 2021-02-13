@@ -44,5 +44,5 @@ while [ -z "MODULE_NAME" ]; do
 done
 
 
-mkdir -p "${ROOTDIR}/module_srcs/${MODULE_NAME}"
-cp -R "${RUNDIR}"/template/ "${ROOTDIR}"/module_srcs/"${MODULE_NAME}"/
+#mkdir -p "${ROOTDIR}/module_srcs/${MODULE_NAME}"
+#cp -R "${RUNDIR}"/template/ "${ROOTDIR}"/module_srcs/"${MODULE_NAME}"/
