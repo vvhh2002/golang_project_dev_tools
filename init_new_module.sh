@@ -15,7 +15,7 @@ while [ -z "MODULE_NAME" ]; do
   if [ -d "${ROOTDIR}/${MODULE_NAME}" ]
   then
      echo "you already build this board, please ReEnter it."
-     BOARD_NAME=""
+     MODULE_NAME=""
      sleep 1
   else
     MODULE_NAME=${MODULE_NAME//" "/"_"}
