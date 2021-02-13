@@ -14,6 +14,7 @@ echo "This is golang develop project tools"
 echo "script run at ${RUNDIR}"
 echo "project root at ${ROOTDIR}"
 
+
 cd "${ROOTDIR}" || exit
 git init
 mkdir -p doc/install

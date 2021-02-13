@@ -2,6 +2,7 @@ echo "This Script create by Victor Ho"
 echo "Now Let's create a new module!"
 
 MODULE_NAME=""
+
 # shellcheck disable=SC2157
 while [ -z "MODULE_NAME" ]; do
   read -r -p "Enter New Module Name: " MODULE_NAME
