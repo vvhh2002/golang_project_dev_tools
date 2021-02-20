@@ -62,4 +62,5 @@ echo "This Script create by Victor Ho"
 
 cat ${RUNDIR}/readme.md
 
+ln -s ${ROOTDIR}/web out/web
 echo "let start from here! now you will hunt happy!"

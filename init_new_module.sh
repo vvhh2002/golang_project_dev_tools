@@ -1,5 +1,4 @@
-echo "This Script create by Victor Ho"
-echo "Now Let's create a new module!"
+
 PROJECT_NAME=${PWD##*/}
 
 SOURCE="${BASH_SOURCE[0]}"
@@ -13,12 +12,14 @@ ROOTDIR="$( cd -P "$( dirname "$RUNDIR/.././" )" >/dev/null 2>&1 && pwd )"
 echo "This is golang develop project new module tools"
 echo "script run at ${RUNDIR}"
 echo "project root at ${ROOTDIR}"
-MODULE_NAME=""
+echo "This Script create by Victor Ho"
+echo "Now Let's create a new module!"
 
+MODULE_NAME=""
 # shellcheck disable=SC2157
-while [ -z "MODULE_NAME" ]; do
+while [ -z "$MODULE_NAME" ]; do
   read -r -p "Enter New Module Name: " MODULE_NAME
-  if [ -z "MODULE_NAME" ]
+  if [ -z "$MODULE_NAME" ]
   then
     echo "Name is Empty please ReEnter it."
     sleep 1
@@ -44,5 +45,14 @@ while [ -z "MODULE_NAME" ]; do
 done
 
 
-#mkdir -p "${ROOTDIR}/module_srcs/${MODULE_NAME}"
-#cp -R "${RUNDIR}"/template/ "${ROOTDIR}"/module_srcs/"${MODULE_NAME}"/
+mkdir -p "${ROOTDIR}/module_srcs/${MODULE_NAME}"
+mkdir -p "${ROOTDIR}/module_srcs/${MODULE_NAME}/main"
+mkdir -p "${ROOTDIR}/module_srcs/${MODULE_NAME}/test"
+mkdir -p "${ROOTDIR}/module_srcs/${MODULE_NAME}/cmd"
+mkdir -p "${ROOTDIR}/module_srcs/${MODULE_NAME}/test"
+cd "${ROOTDIR}/module_srcs/${MODULE_NAME}" || exit
+go mod init "github.com/vvhh2002/${MODULE_NAME}"
+cp -R "${RUNDIR}"/template/ "${ROOTDIR}"/module_srcs/"${MODULE_NAME}"/
+
+echo "All ok!"
+echo "Now Let's rock!"
