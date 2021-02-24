@@ -51,7 +51,7 @@ mkdir -p "${ROOTDIR}/module_srcs/${MODULE_NAME}/test"
 mkdir -p "${ROOTDIR}/module_srcs/${MODULE_NAME}/cmd"
 mkdir -p "${ROOTDIR}/module_srcs/${MODULE_NAME}/test"
 cd "${ROOTDIR}/module_srcs/${MODULE_NAME}" || exit
-go mod init "github.com/vvhh2002/${MODULE_NAME}"
+go mod init "ioncreate.com/${MODULE_NAME}"
 cp -R "${RUNDIR}"/template/ "${ROOTDIR}"/module_srcs/"${MODULE_NAME}"/
 
 echo "All ok!"
